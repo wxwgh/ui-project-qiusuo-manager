@@ -7,9 +7,8 @@
 		<el-input v-model="node_name" size="small" placeholder="节点名称" maxlength="10" show-word-limit class="interval_class"></el-input>
 		<el-input v-model="layer_url" size="small" :disabled="layer_url_show_flag" placeholder="服务地址" class="interval_class"></el-input>
 		<div class="layer_type_radio_parent interval_class" v-if="!layer_url_show_flag">
-			<el-radio v-model="layer_type_radio" label="supermap-rest" @change="radio_change()">supermap-rest</el-radio>
-			<!-- <el-radio v-model="layer_type_radio" label="wms" @change="radio_change()">wms</el-radio> -->
-			<!-- <el-radio v-model="layer_type_radio" label="wmts" @change="radio_change()">wmts</el-radio> -->
+			<el-radio v-model="layer_type_radio" label="supermap-rest">supermap-rest</el-radio>
+			<el-radio v-model="layer_type_radio" label="vector">vector</el-radio>
 		</div>
 	</div>
 </template>

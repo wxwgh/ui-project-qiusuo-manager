@@ -8,7 +8,7 @@
 					<template v-if="data.node_type==='根节点'">
 						<span>{{node.label}}</span>
 						<span>
-							<el-button size="mini" type="text" icon="el-icon-refresh" @click.stop="update_click()"></el-button>
+							<el-button size="mini" type="text" icon="el-icon-copy-document" @click.stop="update_click()"></el-button>
 							<el-button size="mini" type="text" icon="el-icon-plus" @click.stop="add_click(data)"></el-button>
 						</span>
 					</template>
@@ -124,6 +124,11 @@
 						order_code:"",
 						opacity:100,
 						opacity_flag:true,
+						icon_size:10,
+						icon_color:"#5193e8",
+						icon_class:"supermapol-icons supermapol-icons-Oval",
+						icon_image:"./supermap/purple.png",
+						icon_radio:"矢量",
 						children:[]
 					}
 					if(post.node_type=="根节点"){
@@ -455,11 +460,13 @@
 			height: 100%;
 			overflow-y:auto;
 			overflow-x: hidden;
+			border-right:@common_border;
 		}
 	}
 	// 图层树样式
 	.el-tree-node__content{
 		height: 45px!important;
+		border-bottom: 1px solid #ccc;
 	}
 	.custom-tree-node{
 		flex: 1;
