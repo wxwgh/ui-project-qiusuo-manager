@@ -2,7 +2,7 @@
 import myCommon from '../../assets/plugins/common.js';
 //引入axios
 import axios from 'axios';
-let host = "localhost:15000";
+let host = "172.18.12.31:15000";
 const layerview_store = {
 	state: {
 		config_url:"http://"+host+"/layertree_service/get_layertree_config",

@@ -2,7 +2,7 @@
 node_modules
 /dist
 web
-
+Dockerfile
 # local env files
 .env.local
 .env.*.local
